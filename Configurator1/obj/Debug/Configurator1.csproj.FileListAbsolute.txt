@@ -1,0 +1,9 @@
+C:\Users\user\Documents\Visual Studio 2013\Projects\Configurator1\Configurator1\bin\Debug\Configurator1.exe.config
+C:\Users\user\Documents\Visual Studio 2013\Projects\Configurator1\Configurator1\bin\Debug\Configurator1.exe
+C:\Users\user\Documents\Visual Studio 2013\Projects\Configurator1\Configurator1\bin\Debug\Configurator1.pdb
+C:\Users\user\Documents\Visual Studio 2013\Projects\Configurator1\Configurator1\obj\Debug\Configurator1.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2013\Projects\Configurator1\Configurator1\obj\Debug\Configurator1.Form1.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\Configurator1\Configurator1\obj\Debug\Configurator1.Properties.Resources.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\Configurator1\Configurator1\obj\Debug\Configurator1.csproj.GenerateResource.Cache
+C:\Users\user\Documents\Visual Studio 2013\Projects\Configurator1\Configurator1\obj\Debug\Configurator1.exe
+C:\Users\user\Documents\Visual Studio 2013\Projects\Configurator1\Configurator1\obj\Debug\Configurator1.pdb
