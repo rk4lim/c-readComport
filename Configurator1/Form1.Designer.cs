@@ -37,9 +37,11 @@
             this.SerialNumber = new System.Windows.Forms.Label();
             this.PinCode = new System.Windows.Forms.Label();
             this.WritePin = new System.Windows.Forms.Button();
-            this.ReadDataSettings = new System.Windows.Forms.Button();
+            this.ReadPhoneDisp = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Sett_settings = new System.Windows.Forms.TabPage();
+            this.ReadPIN = new System.Windows.Forms.Button();
+            this.ReadSerialNumb = new System.Windows.Forms.Button();
             this.Sett_gprs = new System.Windows.Forms.TabPage();
             this.WriteDataGPRS = new System.Windows.Forms.Button();
             this.ReadDataGPRS = new System.Windows.Forms.Button();
@@ -53,13 +55,12 @@
             this.Sett_Email = new System.Windows.Forms.TabPage();
             this.WriteEmail = new System.Windows.Forms.Button();
             this.ReadEmail = new System.Windows.Forms.Button();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tTopicMessage = new System.Windows.Forms.TextBox();
+            this.tTargetAddress = new System.Windows.Forms.TextBox();
+            this.tSenderAddress = new System.Windows.Forms.TextBox();
+            this.tPassword = new System.Windows.Forms.TextBox();
+            this.tLogin = new System.Windows.Forms.TextBox();
+            this.tServerAddress = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -68,9 +69,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupConfig = new System.Windows.Forms.GroupBox();
-            this.ConnectCom = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.DisconnectCom = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ConnectCom = new System.Windows.Forms.Button();
+            this.PortBox2 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.Sett_settings.SuspendLayout();
             this.Sett_gprs.SuspendLayout();
@@ -130,7 +132,7 @@
             // SerialNumber
             // 
             this.SerialNumber.AutoSize = true;
-            this.SerialNumber.Location = new System.Drawing.Point(6, 69);
+            this.SerialNumber.Location = new System.Drawing.Point(6, 88);
             this.SerialNumber.Name = "SerialNumber";
             this.SerialNumber.Size = new System.Drawing.Size(93, 13);
             this.SerialNumber.TabIndex = 6;
@@ -155,22 +157,22 @@
             this.WritePin.UseVisualStyleBackColor = true;
             this.WritePin.Click += new System.EventHandler(this.WritePin_Click);
             // 
-            // ReadDataSettings
+            // ReadPhoneDisp
             // 
-            this.ReadDataSettings.Location = new System.Drawing.Point(6, 228);
-            this.ReadDataSettings.Name = "ReadDataSettings";
-            this.ReadDataSettings.Size = new System.Drawing.Size(107, 36);
-            this.ReadDataSettings.TabIndex = 9;
-            this.ReadDataSettings.Text = "Считать данные";
-            this.ReadDataSettings.UseVisualStyleBackColor = true;
-            this.ReadDataSettings.Click += new System.EventHandler(this.ReadDataSettings_Click);
+            this.ReadPhoneDisp.Location = new System.Drawing.Point(92, 47);
+            this.ReadPhoneDisp.Name = "ReadPhoneDisp";
+            this.ReadPhoneDisp.Size = new System.Drawing.Size(87, 22);
+            this.ReadPhoneDisp.TabIndex = 9;
+            this.ReadPhoneDisp.Text = "Считать";
+            this.ReadPhoneDisp.UseVisualStyleBackColor = true;
+            this.ReadPhoneDisp.Click += new System.EventHandler(this.ReadDataSettings_Click);
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.Sett_settings);
             this.tabControl1.Controls.Add(this.Sett_gprs);
             this.tabControl1.Controls.Add(this.Sett_Email);
-            this.tabControl1.Location = new System.Drawing.Point(16, 126);
+            this.tabControl1.Location = new System.Drawing.Point(16, 94);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(275, 296);
@@ -178,7 +180,9 @@
             // 
             // Sett_settings
             // 
-            this.Sett_settings.Controls.Add(this.ReadDataSettings);
+            this.Sett_settings.Controls.Add(this.ReadPIN);
+            this.Sett_settings.Controls.Add(this.ReadSerialNumb);
+            this.Sett_settings.Controls.Add(this.ReadPhoneDisp);
             this.Sett_settings.Controls.Add(this.PhoneDisp);
             this.Sett_settings.Controls.Add(this.WritePin);
             this.Sett_settings.Controls.Add(this.textPhone);
@@ -195,6 +199,24 @@
             this.Sett_settings.TabIndex = 0;
             this.Sett_settings.Text = "Установки";
             this.Sett_settings.UseVisualStyleBackColor = true;
+            // 
+            // ReadPIN
+            // 
+            this.ReadPIN.Location = new System.Drawing.Point(92, 184);
+            this.ReadPIN.Name = "ReadPIN";
+            this.ReadPIN.Size = new System.Drawing.Size(87, 22);
+            this.ReadPIN.TabIndex = 11;
+            this.ReadPIN.Text = "Считать";
+            this.ReadPIN.UseVisualStyleBackColor = true;
+            // 
+            // ReadSerialNumb
+            // 
+            this.ReadSerialNumb.Location = new System.Drawing.Point(92, 112);
+            this.ReadSerialNumb.Name = "ReadSerialNumb";
+            this.ReadSerialNumb.Size = new System.Drawing.Size(87, 22);
+            this.ReadSerialNumb.TabIndex = 10;
+            this.ReadSerialNumb.Text = "Считать";
+            this.ReadSerialNumb.UseVisualStyleBackColor = true;
             // 
             // Sett_gprs
             // 
@@ -296,15 +318,15 @@
             // 
             // Sett_Email
             // 
+            this.Sett_Email.Controls.Add(this.PortBox2);
             this.Sett_Email.Controls.Add(this.WriteEmail);
             this.Sett_Email.Controls.Add(this.ReadEmail);
-            this.Sett_Email.Controls.Add(this.textBox13);
-            this.Sett_Email.Controls.Add(this.textBox12);
-            this.Sett_Email.Controls.Add(this.textBox11);
-            this.Sett_Email.Controls.Add(this.textBox10);
-            this.Sett_Email.Controls.Add(this.textBox9);
-            this.Sett_Email.Controls.Add(this.textBox8);
-            this.Sett_Email.Controls.Add(this.textBox7);
+            this.Sett_Email.Controls.Add(this.tTopicMessage);
+            this.Sett_Email.Controls.Add(this.tTargetAddress);
+            this.Sett_Email.Controls.Add(this.tSenderAddress);
+            this.Sett_Email.Controls.Add(this.tPassword);
+            this.Sett_Email.Controls.Add(this.tLogin);
+            this.Sett_Email.Controls.Add(this.tServerAddress);
             this.Sett_Email.Controls.Add(this.label10);
             this.Sett_Email.Controls.Add(this.label9);
             this.Sett_Email.Controls.Add(this.label8);
@@ -340,54 +362,47 @@
             this.ReadEmail.UseVisualStyleBackColor = true;
             this.ReadEmail.Click += new System.EventHandler(this.ReadEmail_Click);
             // 
-            // textBox13
+            // tTopicMessage
             // 
-            this.textBox13.Location = new System.Drawing.Point(111, 186);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 20);
-            this.textBox13.TabIndex = 13;
+            this.tTopicMessage.Location = new System.Drawing.Point(111, 186);
+            this.tTopicMessage.Name = "tTopicMessage";
+            this.tTopicMessage.Size = new System.Drawing.Size(133, 20);
+            this.tTopicMessage.TabIndex = 13;
             // 
-            // textBox12
+            // tTargetAddress
             // 
-            this.textBox12.Location = new System.Drawing.Point(111, 160);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 12;
+            this.tTargetAddress.Location = new System.Drawing.Point(111, 160);
+            this.tTargetAddress.Name = "tTargetAddress";
+            this.tTargetAddress.Size = new System.Drawing.Size(133, 20);
+            this.tTargetAddress.TabIndex = 12;
             // 
-            // textBox11
+            // tSenderAddress
             // 
-            this.textBox11.Location = new System.Drawing.Point(111, 134);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 11;
+            this.tSenderAddress.Location = new System.Drawing.Point(111, 134);
+            this.tSenderAddress.Name = "tSenderAddress";
+            this.tSenderAddress.Size = new System.Drawing.Size(133, 20);
+            this.tSenderAddress.TabIndex = 11;
             // 
-            // textBox10
+            // tPassword
             // 
-            this.textBox10.Location = new System.Drawing.Point(111, 108);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 10;
+            this.tPassword.Location = new System.Drawing.Point(111, 108);
+            this.tPassword.Name = "tPassword";
+            this.tPassword.Size = new System.Drawing.Size(133, 20);
+            this.tPassword.TabIndex = 10;
             // 
-            // textBox9
+            // tLogin
             // 
-            this.textBox9.Location = new System.Drawing.Point(111, 82);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 9;
+            this.tLogin.Location = new System.Drawing.Point(111, 82);
+            this.tLogin.Name = "tLogin";
+            this.tLogin.Size = new System.Drawing.Size(133, 20);
+            this.tLogin.TabIndex = 9;
             // 
-            // textBox8
+            // tServerAddress
             // 
-            this.textBox8.Location = new System.Drawing.Point(111, 56);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 8;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(111, 30);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 7;
+            this.tServerAddress.Location = new System.Drawing.Point(111, 30);
+            this.tServerAddress.Name = "tServerAddress";
+            this.tServerAddress.Size = new System.Drawing.Size(133, 20);
+            this.tServerAddress.TabIndex = 7;
             // 
             // label10
             // 
@@ -458,11 +473,29 @@
             this.groupConfig.Controls.Add(this.comboBox1);
             this.groupConfig.Controls.Add(this.ConnectCom);
             this.groupConfig.Controls.Add(this.tabControl1);
-            this.groupConfig.Location = new System.Drawing.Point(30, 43);
+            this.groupConfig.Location = new System.Drawing.Point(12, 12);
             this.groupConfig.Name = "groupConfig";
-            this.groupConfig.Size = new System.Drawing.Size(320, 442);
+            this.groupConfig.Size = new System.Drawing.Size(308, 400);
             this.groupConfig.TabIndex = 2;
             this.groupConfig.TabStop = false;
+            // 
+            // DisconnectCom
+            // 
+            this.DisconnectCom.Location = new System.Drawing.Point(112, 19);
+            this.DisconnectCom.Name = "DisconnectCom";
+            this.DisconnectCom.Size = new System.Drawing.Size(90, 42);
+            this.DisconnectCom.TabIndex = 4;
+            this.DisconnectCom.Text = "Отключить";
+            this.DisconnectCom.UseVisualStyleBackColor = true;
+            this.DisconnectCom.Click += new System.EventHandler(this.DisconnectCom_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(16, 67);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(186, 21);
+            this.comboBox1.TabIndex = 3;
             // 
             // ConnectCom
             // 
@@ -474,29 +507,23 @@
             this.ConnectCom.UseVisualStyleBackColor = true;
             this.ConnectCom.Click += new System.EventHandler(this.ConnectCom_Click);
             // 
-            // comboBox1
+            // PortBox2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // DisconnectCom
-            // 
-            this.DisconnectCom.Location = new System.Drawing.Point(16, 67);
-            this.DisconnectCom.Name = "DisconnectCom";
-            this.DisconnectCom.Size = new System.Drawing.Size(90, 42);
-            this.DisconnectCom.TabIndex = 4;
-            this.DisconnectCom.Text = "Отключить";
-            this.DisconnectCom.UseVisualStyleBackColor = true;
-            this.DisconnectCom.Click += new System.EventHandler(this.DisconnectCom_Click);
+            this.PortBox2.FormatString = "N0";
+            this.PortBox2.FormattingEnabled = true;
+            this.PortBox2.Items.AddRange(new object[] {
+            "25",
+            "495"});
+            this.PortBox2.Location = new System.Drawing.Point(111, 56);
+            this.PortBox2.Name = "PortBox2";
+            this.PortBox2.Size = new System.Drawing.Size(133, 21);
+            this.PortBox2.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 505);
+            this.ClientSize = new System.Drawing.Size(330, 422);
             this.Controls.Add(this.groupConfig);
             this.Name = "Form1";
             this.Text = "Configurator GSM";
@@ -523,7 +550,7 @@
         private System.Windows.Forms.Label SerialNumber;
         private System.Windows.Forms.Label PinCode;
         private System.Windows.Forms.Button WritePin;
-        private System.Windows.Forms.Button ReadDataSettings;
+        private System.Windows.Forms.Button ReadPhoneDisp;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Sett_settings;
         private System.Windows.Forms.TabPage Sett_gprs;
@@ -535,13 +562,12 @@
         private System.Windows.Forms.Button Megafon;
         private System.Windows.Forms.Button Mts;
         private System.Windows.Forms.TabPage Sett_Email;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tTopicMessage;
+        private System.Windows.Forms.TextBox tTargetAddress;
+        private System.Windows.Forms.TextBox tSenderAddress;
+        private System.Windows.Forms.TextBox tPassword;
+        private System.Windows.Forms.TextBox tLogin;
+        private System.Windows.Forms.TextBox tServerAddress;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -557,8 +583,9 @@
         private System.Windows.Forms.Button ConnectCom;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button DisconnectCom;
-
-
+        private System.Windows.Forms.Button ReadPIN;
+        private System.Windows.Forms.Button ReadSerialNumb;
+        private System.Windows.Forms.ComboBox PortBox2;
     }
 }
 

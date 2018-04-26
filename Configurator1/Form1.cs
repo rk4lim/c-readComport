@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 
@@ -19,6 +12,13 @@ namespace Configurator1
             InitializeComponent();
             string[] ports = SerialPort.GetPortNames();
             comboBox1.Items.AddRange(ports);
+            tServerAddress.ReadOnly = true;
+            tServerAddress.TextAlign = HorizontalAlignment.Center;
+            tServerAddress.Text = "ec.axion-med.ru";
+            
+            //tPortNumber.ReadOnly = true;
+            //tPortNumber.TextAlign = HorizontalAlignment.Center;
+            //tPortNumber.Text = "25";
         }
 
         private void ConnectCom_Click(object sender, EventArgs e)
@@ -85,10 +85,13 @@ namespace Configurator1
        {
            try
            {
-               textAPN.Text = "internet.mts.ru";
-               textNameUser.Text = "mts";
-               textPassword.Text = "mts";
-               //далее записать даныне по ком порту
+                textAPN.TextAlign = HorizontalAlignment.Center;
+                textAPN.Text = "internet.mts.ru";
+                textNameUser.TextAlign = HorizontalAlignment.Center;
+                textNameUser.Text = "mts";
+                textPassword.TextAlign = HorizontalAlignment.Center;
+                textPassword.Text = "mts";
+               
            }
            catch (Exception ex) { MessageBox.Show(ex.Message); }
        }
@@ -97,10 +100,13 @@ namespace Configurator1
        {
            try
            {
+                textAPN.TextAlign = HorizontalAlignment.Center;
                textAPN.Text = "internet";
-               textNameUser.Text = "gdata";
-               textPassword.Text = "gdata";
-               //далее записать даныне по ком порту
+                textNameUser.TextAlign = HorizontalAlignment.Center;
+                textNameUser.Text = "gdata";
+                textPassword.TextAlign = HorizontalAlignment.Center;
+                textPassword.Text = "gdata";
+               
            }
            catch (Exception ex) { MessageBox.Show(ex.Message); }
        }
@@ -109,10 +115,13 @@ namespace Configurator1
        {
            try
            {
-               textAPN.Text = "internet.beeline.ru";
-               textNameUser.Text = "beeline";
-               textPassword.Text = "beeline";
-               //далее записать даныне по ком порту
+                textAPN.TextAlign = HorizontalAlignment.Center;
+                textAPN.Text = "internet.beeline.ru";
+                textNameUser.TextAlign = HorizontalAlignment.Center;
+                textNameUser.Text = "beeline";
+                textPassword.TextAlign = HorizontalAlignment.Center;
+                textPassword.Text = "beeline";
+               
            }
            catch (Exception ex) { MessageBox.Show(ex.Message); }
        }
@@ -122,22 +131,28 @@ namespace Configurator1
            
                try
            {
-               textAPN.Text = "internet.tele2.ru";
+                textAPN.TextAlign = HorizontalAlignment.Center;
+                textAPN.Text = "internet.tele2.ru";
+                textNameUser.TextAlign = HorizontalAlignment.Center;
                textNameUser.Text = "";
+                textPassword.TextAlign = HorizontalAlignment.Center;
                textPassword.Text = "";
-               //далее записать даныне по ком порту
+               
            }
            catch (Exception ex) { MessageBox.Show(ex.Message); }
        }
 
        private void ReadEmail_Click(object sender, EventArgs e)
        {
-           /*отправить команду по com на считывание данных(email) с кардиографа*/
-       }
+            /*отправить команду по com на считывание данных(email) с кардиографа*/
+           
+        }
 
-       private void WriteEmail_Click(object sender, EventArgs e)
+        private void WriteEmail_Click(object sender, EventArgs e)
        {
-           /*запись данных(email) на кардиограф*/
+            
+           /*считать все поля  потом запись данных(email) на кардиограф*/
+          
        }
     
 
