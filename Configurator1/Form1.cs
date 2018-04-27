@@ -4,6 +4,24 @@ using System.IO.Ports;
 
 namespace Configurator1
 {
+   public enum base_comandEC 
+    {
+       START_CONFIG  =  0x01,//0x70 // начать сеанс работы с модемом
+       STOP_CONFIG  =   0x02,//0x79 // завершить сеанс работы с модемом
+       SET_MODEM_DATA = 0x71, // получить общие данные о модеме
+       GET_NUMBER_EK =  0x11,//0x21 // получить номер ЭК
+       SET_NUMBER_EK =  0x21,//0x22 // установить номер ЭК
+       GET_PIN_COD =    0x12, // получить PIN-код
+       SET_PIN_COD  =   0x22, // установить  PIN-код
+       GET_GPRS_DATA =  0x13,//0x73 // получить параметры GPRS соединения
+       SET_GPRS_DATA =  0x23,//0x74 // установить  параметры GPRS соединения
+       GET_N_PHONE   =  0x14,//0x82 // получить номер телефона диспетчера
+       SET_N_PHONE  =   0x24,//0x72 // установить номер телефона диспетчера
+       GET_GPRS_SOCKET= 0x15,//0x75 // получить параметры GPRS сокета
+       SET_GPRS_SOCKET =0x25,//0x76 // установить параметры GPRS сокета
+       GET_EMAIL_DATA=  0x16,//0x77 // получить параметры Email
+       SET_EMAIL_DATA = 0x26//0x78 // установить параметры Email
+    }
     public partial class Form1 : Form
     {
         int phone = 0;
@@ -29,6 +47,10 @@ namespace Configurator1
             Program.sPort.Parity = Parity.None;
             Program.sPort.DataBits = 8;
             Program.sPort.Open();
+            if (Program.sPort.IsOpen)
+            {
+                Program.sPort.Write(START_CONFIG);
+            }
         }
 
         private void DisconnectCom_Click(object sender, EventArgs e)
